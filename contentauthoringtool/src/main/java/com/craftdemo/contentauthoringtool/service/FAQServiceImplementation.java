@@ -20,10 +20,10 @@ public class FAQServiceImplementation implements FAQService {
 
     @Override
     public FAQ updateFAQ(int id, FAQ faq) {
-        FAQ faqFromDB = faqRepository.getReferenceById(id);
+        FAQ faqFromDB = faqRepository.findById(id).get();
         faqFromDB.setAnswer(faq.getAnswer());
         faqFromDB.setQuestion(faq.getQuestion());
-        return faqRepository.save(faqFromDB);
+        return faqRepository.saveAndFlush(faqFromDB);
     }
 
     @Override
