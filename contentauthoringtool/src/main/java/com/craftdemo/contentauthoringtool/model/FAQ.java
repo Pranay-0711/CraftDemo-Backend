@@ -15,6 +15,13 @@ public class FAQ {
     private UUID userId;
     private String question;
 
+    public FAQ(int i, String question, String answer, UUID userId) {
+        this.id = i;
+        this.question = question;
+        this.answer = answer;
+        this.userId = userId;
+    }
+
     public void setId(int id) {
         this.id = id;
     }

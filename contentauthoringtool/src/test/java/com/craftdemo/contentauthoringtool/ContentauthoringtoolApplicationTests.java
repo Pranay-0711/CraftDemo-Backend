@@ -8,6 +8,7 @@ class ContentauthoringtoolApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

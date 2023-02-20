@@ -1,6 +1,6 @@
-package com.craftdemo.contentauthoringtool.service;
+package com.craftdemo.contentauthoringtool.service.impl;
 
-import com.craftdemo.contentauthoringtool.interfaces.HelpArticleService;
+import com.craftdemo.contentauthoringtool.service.HelpArticleService;
 import com.craftdemo.contentauthoringtool.model.HelpArticle;
 import com.craftdemo.contentauthoringtool.repository.HelpArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;

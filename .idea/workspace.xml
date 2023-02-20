@@ -10,10 +10,18 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ContentauthoringtoolApplication">
     <configuration name="ContentauthoringtoolApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.craftdemo.contentauthoringtool.ContentauthoringtoolApplication" />
       <module name="contentauthoringtool" />
@@ -27,13 +35,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FAQControllerTest.testUpdateFAQ" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contentauthoringtool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.craftdemo.contentauthoringtool.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.craftdemo.contentauthoringtool.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.craftdemo.contentauthoringtool.controller.FAQControllerTest" />
+      <option name="METHOD_NAME" value="testUpdateFAQ" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FAQControllerTest.testUpdateFAQWithException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contentauthoringtool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.craftdemo.contentauthoringtool.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.craftdemo.contentauthoringtool.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.craftdemo.contentauthoringtool.controller.FAQControllerTest" />
+      <option name="METHOD_NAME" value="testUpdateFAQWithException" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ContentauthoringtoolApplication" />
+        <item itemvalue="JUnit.FAQControllerTest.testUpdateFAQ" />
+        <item itemvalue="JUnit.FAQControllerTest.testUpdateFAQWithException" />
       </list>
     </recent_temporary>
   </component>
   <component name="TaskManager">
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/contentauthoringtool/src/main/java/com/craftdemo/contentauthoringtool/service/impl/SchemaServiceImpl.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

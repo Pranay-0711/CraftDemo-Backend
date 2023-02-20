@@ -1,8 +1,6 @@
 package com.craftdemo.contentauthoringtool.controller;
 
-import com.craftdemo.contentauthoringtool.interfaces.FAQService;
-import com.craftdemo.contentauthoringtool.interfaces.HelpArticleService;
-import com.craftdemo.contentauthoringtool.model.FAQ;
+import com.craftdemo.contentauthoringtool.service.HelpArticleService;
 import com.craftdemo.contentauthoringtool.model.HelpArticle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

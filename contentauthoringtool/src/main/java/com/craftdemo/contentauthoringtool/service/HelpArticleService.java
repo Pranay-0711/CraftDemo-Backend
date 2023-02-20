@@ -1,4 +1,4 @@
-package com.craftdemo.contentauthoringtool.interfaces;
+package com.craftdemo.contentauthoringtool.service;
 
 import com.craftdemo.contentauthoringtool.model.HelpArticle;
 
