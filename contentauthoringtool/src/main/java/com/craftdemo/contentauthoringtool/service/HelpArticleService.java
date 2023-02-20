@@ -9,5 +9,6 @@ public interface HelpArticleService {
     public HelpArticle saveHelpArticle(HelpArticle helpArticle);
     public HelpArticle updateHelpArticle(int id, HelpArticle helpArticle);
     List<HelpArticle> getHelpArticle();
+    public void deleteFaqById(int id);
     List<HelpArticle> getHelpArticleByUserId(UUID userId);
 }

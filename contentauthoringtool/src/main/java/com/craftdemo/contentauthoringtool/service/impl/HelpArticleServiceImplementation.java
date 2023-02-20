@@ -1,5 +1,6 @@
 package com.craftdemo.contentauthoringtool.service.impl;
 
+import com.craftdemo.contentauthoringtool.model.FAQ;
 import com.craftdemo.contentauthoringtool.service.HelpArticleService;
 import com.craftdemo.contentauthoringtool.model.HelpArticle;
 import com.craftdemo.contentauthoringtool.repository.HelpArticleRepository;
@@ -34,6 +35,18 @@ public class HelpArticleServiceImplementation implements HelpArticleService {
     @Override
     public List<HelpArticle> getHelpArticle() {
         return helpArticleRepository.findAll();
+    }
+
+    @Override
+    public void deleteFaqById(int id) {
+        try{
+            HelpArticle dataFromDB = helpArticleRepository.findById(id).get();
+            helpArticleRepository.delete(dataFromDB);
+        }
+        catch(Exception e){
+            System.err.println("Exception occured while deletion-"+e);
+            throw e;
+        }
     }
 
     @Override

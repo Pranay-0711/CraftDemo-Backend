@@ -1,5 +1,6 @@
 package com.craftdemo.contentauthoringtool.controller;
 
+import com.craftdemo.contentauthoringtool.exception.BadRequestException;
 import com.craftdemo.contentauthoringtool.service.HelpArticleService;
 import com.craftdemo.contentauthoringtool.model.HelpArticle;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,17 @@ public class HelpArticleController {
     public String update(@PathVariable int id, @RequestBody HelpArticle helpArticle){
         helpArticleService.updateHelpArticle(id, helpArticle);
         return "Help Article updated in the DB";
+    }
+
+    @DeleteMapping("{id}/delete")
+    public String delete(@PathVariable int id) throws BadRequestException {
+        try{
+            helpArticleService.deleteFaqById(id);
+        }
+        catch(Exception e){
+            throw new BadRequestException(e.getMessage(), e);
+        }
+        return "FAQ deleted in the DB";
     }
 
     @GetMapping("/get")
