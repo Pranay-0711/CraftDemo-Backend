@@ -38,7 +38,7 @@ public class HelpArticleServiceImplementation implements HelpArticleService {
     }
 
     @Override
-    public void deleteFaqById(int id) {
+    public void deleteArticleById(int id) {
         try{
             HelpArticle dataFromDB = helpArticleRepository.findById(id).get();
             helpArticleRepository.delete(dataFromDB);

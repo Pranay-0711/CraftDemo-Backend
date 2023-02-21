@@ -31,7 +31,7 @@ public class HelpArticleController {
     @DeleteMapping("{id}/delete")
     public String delete(@PathVariable int id) throws BadRequestException {
         try{
-            helpArticleService.deleteFaqById(id);
+            helpArticleService.deleteArticleById(id);
         }
         catch(Exception e){
             throw new BadRequestException(e.getMessage(), e);

@@ -3,6 +3,7 @@ package com.craftdemo.contentauthoringtool.service.impl;
 import com.craftdemo.contentauthoringtool.service.FAQService;
 import com.craftdemo.contentauthoringtool.model.FAQ;
 import com.craftdemo.contentauthoringtool.repository.FAQRepository;
+import com.craftdemo.contentauthoringtool.utility.ILogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,10 @@ import java.util.UUID;
 public class FAQServiceImplementation implements FAQService {
     @Autowired
     private FAQRepository faqRepository;
+
+    @Autowired
+    ILogger<String> logger;
+
     @Override
     public FAQ saveFAQ(FAQ frequentQuestionAndAnswer) {
         FAQ faq=null;
@@ -20,7 +25,7 @@ public class FAQServiceImplementation implements FAQService {
             faq = faqRepository.save(frequentQuestionAndAnswer);
         }
         catch(Exception e){
-            System.err.println("Error Occured while saving FAQ.");
+            logger.logError("Error Occured while saving FAQ.");
         }
         return faq;
     }
@@ -52,7 +57,7 @@ public class FAQServiceImplementation implements FAQService {
             faqRepository.delete(dataFromDB);
         }
         catch(Exception e){
-            System.err.println("Exception occured while deletion-"+e);
+            logger.logError("Exception occured while deletion-"+e);
             throw e;
         }
     }
