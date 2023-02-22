@@ -1,5 +1,6 @@
 package com.craftdemo.contentauthoringtool.service.impl;
 
+import com.craftdemo.contentauthoringtool.exception.BadRequestException;
 import com.craftdemo.contentauthoringtool.service.FAQService;
 import com.craftdemo.contentauthoringtool.model.FAQ;
 import com.craftdemo.contentauthoringtool.repository.FAQRepository;
@@ -20,13 +21,19 @@ public class FAQServiceImplementation implements FAQService {
 
     @Override
     public FAQ saveFAQ(FAQ frequentQuestionAndAnswer) {
+        //validation check
+        if(frequentQuestionAndAnswer==null){
+            throw new BadRequestException("Please enter a valid FAQ");
+        }
         FAQ faq=null;
         try{
             faq = faqRepository.save(frequentQuestionAndAnswer);
         }
         catch(Exception e){
             logger.logError("Error Occured while saving FAQ.");
+            throw e;
         }
+        logger.logInfo("Faq persisted in the DB");
         return faq;
     }
 
@@ -40,6 +47,7 @@ public class FAQServiceImplementation implements FAQService {
             faqFromDB = faqRepository.saveAndFlush(faqFromDB);
         }
         catch(Exception e){
+            logger.logError("Exception occured while updating the DB"+e.getMessage());
             throw e;
         }
        return faqFromDB;
@@ -60,6 +68,7 @@ public class FAQServiceImplementation implements FAQService {
             logger.logError("Exception occured while deletion-"+e);
             throw e;
         }
+        logger.logInfo("Successfully deleted the faq record");
     }
 
     @Override

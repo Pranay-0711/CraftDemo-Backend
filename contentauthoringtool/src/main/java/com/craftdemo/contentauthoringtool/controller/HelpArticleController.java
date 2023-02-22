@@ -18,13 +18,21 @@ public class HelpArticleController {
 
     @PostMapping("/add")
     public String add(@RequestBody HelpArticle helpArticle){
-        helpArticleService.saveHelpArticle(helpArticle);
+        try{
+            helpArticleService.saveHelpArticle(helpArticle);
+        }catch(Exception e){
+            throw new BadRequestException(e.getMessage(),e);
+        }
         return "FAQ persisted in the DB";
     }
 
     @PutMapping("{id}/update")
     public String update(@PathVariable int id, @RequestBody HelpArticle helpArticle){
-        helpArticleService.updateHelpArticle(id, helpArticle);
+        try{
+            helpArticleService.updateHelpArticle(id, helpArticle);
+        }catch(Exception e){
+            throw new BadRequestException(e.getMessage(),e);
+        }
         return "Help Article updated in the DB";
     }
 

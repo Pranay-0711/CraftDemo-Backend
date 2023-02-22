@@ -18,7 +18,12 @@ public class FAQController {
 
     @PostMapping("/add")
     public String add(@RequestBody FAQ faq){
-        faqService.saveFAQ(faq);
+        try{
+            faqService.saveFAQ(faq);
+        }
+        catch(Exception e){
+            throw new BadRequestException(e.getMessage(),e);
+        }
         return "FAQ persisted in the DB";
     }
 
