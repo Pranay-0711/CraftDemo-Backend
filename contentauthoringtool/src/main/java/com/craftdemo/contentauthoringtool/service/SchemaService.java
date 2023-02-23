@@ -18,4 +18,17 @@ public interface SchemaService {
      * @return schema payload
      */
     public FormPayload getSchemaByType(String type);
+
+    /**
+     *
+     * @param type type of schema
+     * @param formPayload schema payload
+     * @return
+     */
+    FormPayload updatePayload(String type, FormPayload formPayload);
+
+    /**
+     * Refresh cache on application startup
+     */
+    public void refreshCacheWithSchema();
 }

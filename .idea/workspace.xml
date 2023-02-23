@@ -14,8 +14,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -32,6 +32,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FAQControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contentauthoringtool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.craftdemo.contentauthoringtool.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.craftdemo.contentauthoringtool.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.craftdemo.contentauthoringtool.controller.FAQControllerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -71,6 +86,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ContentauthoringtoolApplication" />
+        <item itemvalue="JUnit.FAQControllerTest" />
         <item itemvalue="JUnit.FAQControllerTest.testUpdateFAQ" />
         <item itemvalue="JUnit.FAQControllerTest.testUpdateFAQWithException" />
       </list>
@@ -78,16 +94,5 @@
   </component>
   <component name="TaskManager">
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/contentauthoringtool/src/main/java/com/craftdemo/contentauthoringtool/service/impl/SchemaServiceImpl.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
